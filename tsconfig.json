@@ -19,12 +19,24 @@
     "target": "es2022",
     "module": "es2020",
     "lib": ["es2018", "dom"],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "typeRoots": [
+      "node_modules/@types",
+    ],
+    "types": [
+      "google.maps"
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "typeRoots": [
+      "node_modules/@types",
+    ],
+    "types": [
+      "google.maps"
+    ]
   }
 }

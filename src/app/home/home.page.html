@@ -8,17 +8,23 @@
 
 <ion-content class="ion-padding">
 
-  <ion-button expand="block" (click)="getAccuracies()">Get Location</ion-button>
+  <ion-button expand="block" (click)="getLocation()" [disabled]="showLoading">Get Location</ion-button>
 
   <ion-grid>
     <ion-row>
-      <ion-col>Web/Cordova</ion-col>
-      <ion-col>{{ webLocation() | json }}</ion-col>
+      <ion-col>Lat</ion-col>
+      <ion-col>{{ webLocation().latitude | number:'1.5' }}</ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>Cap</ion-col>
-      <ion-col>{{ capLocation() | json }}</ion-col>
+      <ion-col>Long</ion-col>
+      <ion-col>{{ webLocation().longitude | number:'1.5' }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Accuracy</ion-col>
+      <ion-col>{{ webLocation().accuracy | number:'1.2' }}</ion-col>
     </ion-row>
   </ion-grid>
+
+  <div id="map"></div>
 
 </ion-content>
