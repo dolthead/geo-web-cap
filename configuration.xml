@@ -1,0 +1,3 @@
+<edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+   <string>To verify location of client visits.</string>
+</edit-config>
