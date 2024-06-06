@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Geolocationization
+      Geolocationization 2.1
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -28,3 +28,11 @@
   <div id="map"></div>
 
 </ion-content>
+
+@if (updateReady) {
+  <ion-footer class="ion-padding">
+      <ion-button expand="block" (click)="doUpdate()" color="light" size="small">
+        New version available - update now
+      </ion-button>
+  </ion-footer>
+}

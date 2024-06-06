@@ -32,6 +32,9 @@ importers:
       '@angular/router':
         specifier: ^17.3.10
         version: 17.3.10(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(@angular/platform-browser@17.3.10(@angular/animations@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(rxjs@7.8.1)
+      '@angular/service-worker':
+        specifier: ^17.3.10
+        version: 17.3.11(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))
       '@awesome-cordova-plugins/core':
         specifier: ^6.7.0
         version: 6.7.0(rxjs@7.8.1)
@@ -83,7 +86,7 @@ importers:
     devDependencies:
       '@angular-devkit/build-angular':
         specifier: ^17.3.8
-        version: 17.3.8(@angular/compiler-cli@17.3.10(@angular/compiler@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.2.2))(@types/express@4.17.21)(@types/node@20.13.0)(chokidar@3.6.0)(karma@6.4.3)(typescript@5.2.2)
+        version: 17.3.8(@angular/compiler-cli@17.3.10(@angular/compiler@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.2.2))(@angular/service-worker@17.3.11(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(@types/express@4.17.21)(@types/node@20.13.0)(chokidar@3.6.0)(karma@6.4.3)(typescript@5.2.2)
       '@angular-eslint/builder':
         specifier: ^17.5.2
         version: 17.5.2(eslint@8.57.0)(typescript@5.2.2)
@@ -352,6 +355,14 @@ packages:
       '@angular/core': 17.3.10
       '@angular/platform-browser': 17.3.10
       rxjs: ^6.5.3 || ^7.4.0
+
+  '@angular/service-worker@17.3.11':
+    resolution: {integrity: sha512-6RgBbbLTPME5ocE44OOtXG578RaBiFD1IK5RR7ByETEcHN65jZj354d6SCUK9+CpAc8RsA9hDGmhKNlH3XYo6w==}
+    engines: {node: ^18.13.0 || >=20.9.0}
+    hasBin: true
+    peerDependencies:
+      '@angular/common': 17.3.11
+      '@angular/core': 17.3.11
 
   '@awesome-cordova-plugins/core@6.7.0':
     resolution: {integrity: sha512-VZGn/FkmgEoHdFJ7KXHLDcnvU6p+QHdOP9eIfTwsu+IltNt7Yv+i60FO0i/n16RhhbxOaH7V3Uk8lFUBfXxWug==}
@@ -5159,7 +5170,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-devkit/build-angular@17.3.8(@angular/compiler-cli@17.3.10(@angular/compiler@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.2.2))(@types/express@4.17.21)(@types/node@20.13.0)(chokidar@3.6.0)(karma@6.4.3)(typescript@5.2.2)':
+  '@angular-devkit/build-angular@17.3.8(@angular/compiler-cli@17.3.10(@angular/compiler@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.2.2))(@angular/service-worker@17.3.11(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(@types/express@4.17.21)(@types/node@20.13.0)(chokidar@3.6.0)(karma@6.4.3)(typescript@5.2.2)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.1703.8(chokidar@3.6.0)
@@ -5227,6 +5238,7 @@ snapshots:
       webpack-merge: 5.10.0
       webpack-subresource-integrity: 5.1.0(webpack@5.90.3(esbuild@0.20.1))
     optionalDependencies:
+      '@angular/service-worker': 17.3.11(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))
       esbuild: 0.20.1
       karma: 6.4.3
     transitivePeerDependencies:
@@ -5443,6 +5455,12 @@ snapshots:
       '@angular/core': 17.3.10(rxjs@7.8.1)(zone.js@0.14.6)
       '@angular/platform-browser': 17.3.10(@angular/animations@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))
       rxjs: 7.8.1
+      tslib: 2.6.2
+
+  '@angular/service-worker@17.3.11(@angular/common@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1))(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))':
+    dependencies:
+      '@angular/common': 17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6))(rxjs@7.8.1)
+      '@angular/core': 17.3.10(rxjs@7.8.1)(zone.js@0.14.6)
       tslib: 2.6.2
 
   '@awesome-cordova-plugins/core@6.7.0(rxjs@7.8.1)':
